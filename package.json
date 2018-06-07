@@ -1,0 +1,19 @@
+{
+  "name": "webpack-loader",
+  "version": "1.0.0",
+  "description": "webpack loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marsqinht/webpack-loader.git"
+  },
+  "author": "qinhaitao <qinhaitaocn@163.com> (http://github.com/marsqinht)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marsqinht/webpack-loader/issues"
+  },
+  "homepage": "https://github.com/marsqinht/webpack-loader#readme"
+}
