@@ -1,2 +1,2 @@
-console.log(111);
-//alert(1)
+import './src/app.js';
+console.log(1112224);
