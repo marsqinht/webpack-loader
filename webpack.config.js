@@ -1,4 +1,5 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //通过 npm 安装
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 
 
@@ -9,7 +10,7 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].js',
+    filename: 'js/[name].bundle.js',
     publicPath: './'
   },
   module: {
@@ -28,6 +29,7 @@ const config = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       template: './index.html'
     })
