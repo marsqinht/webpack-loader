@@ -12,6 +12,21 @@ const config = {
     filename: 'js/[name].js',
     publicPath: './'
   },
+  module: {
+    rules: [
+      {
+        test: /.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.(png|gif|jpg|jpeg|svg)$/,
+        use: ['file-loader']
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html'

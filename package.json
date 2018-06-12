@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/marsqinht/webpack-loader#readme",
   "devDependencies": {
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
     "webpack": "^4.11.1",
     "webpack-cli": "^3.0.3"
   }

@@ -1,6 +1,9 @@
+import './style.css'
+
 function component() {
   var element = document.createElement('div');
   element.innerHTML = 'hello,webpack';
+  element.classList.add('hello');
   return element
 }
 
