@@ -9,6 +9,10 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = merge(base, {
   devtool: '#source-map',
+  output: {
+    filename: '[name]_[hash].js',
+    chunkFilename: '[name]_[chunkhash].js'
+  },
   optimization: {
     splitChunks: {
       chunks: 'initial', // 只对入口文件处理
@@ -34,15 +38,13 @@ module.exports = merge(base, {
     }),
     new UglifyJsPlugin({
       cache: true,
-      parallel: true,
-      sourceMap: true // set to true if you want JS source maps
+      parallel: true
     }),
     new OptimizeCSSAssetsPlugin({}),
     new CleanWebpackPlugin(['dist']),
-    new BundleAnalyzerPlugin(),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
+    // new webpack.HashedModuleIdsPlugin(),
+    // new BundleAnalyzerPlugin(),
+    new MiniCssExtractPlugin({ // 分离css
       filename: "[name].[hash].css",
       chunkFilename: "[id].[hash].css"
     })

@@ -1,13 +1,14 @@
 import './style.css'
-import { add } from './utils';
-import _ from 'lodash';
+// import { add } from './utils';
+// import _ from 'lodash';
 console.log(_)
 
 
  function component() {
   var element = document.createElement('div');
-  // element.innerHTML = 'hello,webpack' + add(2, 4);
-  // element.classList.add('hello');
+  element.innerHTML = 'hello,webpack' + add(2, 4);
+  element.classList.add('hello');
+
   var button = document.createElement('button');
   var br = document.createElement('br');
 
@@ -16,11 +17,11 @@ console.log(_)
   element.appendChild(br);
   element.appendChild(button);
 
-  button.onclick = e =>
-    import ('./print').then(module => {
-      var print = module.default;
-      print();
-    });
+  // button.onclick = e =>
+  //   import ('./print').then(module => {
+  //     var print = module.default;
+  //     print();
+  //   });
 
   return element
 }

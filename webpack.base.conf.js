@@ -13,13 +13,14 @@ const config = {
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js',
+    filename: '[name].js',
     publicPath: './'
   },
   module: {
     rules: [
       {
         test: /.css$/,
+        include: path.resolve(__dirname, "src"),
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader'
@@ -27,8 +28,18 @@ const config = {
       },
       {
         test: /\.(png|gif|jpg|jpeg|svg)$/,
+        include: path.resolve(__dirname, "src"),
         use: ['file-loader']
-      }
+      },
+      {
+        test: /.js$/,
+        include: path.resolve(__dirname, "src"),
+        use: [
+          {
+            loader: path.resolve('loader/loader.js')
+          }
+        ]
+      },
     ]
   },
   plugins: [
