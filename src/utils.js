@@ -1,4 +1,7 @@
+import _ from 'lodash';
+
 export function add(x, y) {
+  console.log(_);
   return x + y;
 }
 
