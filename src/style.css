@@ -1,6 +1,7 @@
 .hello {
   color: red;
-  width: 100px;
-  height: 100px;
-  background: url(./calei.jpeg);
+  width: 200px;
+  height: 200px;
+  background: url(./calei.jpeg) center no-repeat;
+  background-size: contain;
 }
